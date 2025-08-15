@@ -30,9 +30,9 @@ ASSISTANT_NAME = "Holo Assistant"
 
 class HoloAssistant:
     def __init__(self):
-        self.client = HoloAI()
-        self.memories = []
+        self.client     = HoloAI()
         self.skillGraph = SkillGraph()
+        self.memories   = []
 
         # Provider configurations (default values can be overridden by env vars)
         self.providerMap = {
@@ -70,7 +70,7 @@ class HoloAssistant:
         if len(self.memories) > maxTurns * 2:
             self.memories = self.memories[-maxTurns*2:]
 
-    def chat(self, user: str) -> str:
+    def HoloCompletion(self, user: str) -> str:
         skills = self.skillGraph.getAgentCapabilities()
         actions = self.skillGraph.getAgentActions()
 
@@ -100,7 +100,7 @@ class HoloAssistant:
             if prompt.lower() in ["exit", "quit", "q"]:
                 print("Exiting Holo Assistant. Goodbye!")
                 break
-            reply = self.chat(prompt.lower())
+            reply = self.HoloCompletion(prompt.lower())
             print(f"\n{ASSISTANT_NAME}:\n{reply}\n")
 
 
