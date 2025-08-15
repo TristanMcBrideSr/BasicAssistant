@@ -61,7 +61,7 @@ OPENAI_VISION_MODEL=gpt-4.1
 ## 🖥️ Usage
 
 ```bash
-python HoloAssistant.py
+python BasicAssistant.py
 ```
 
 Example:
