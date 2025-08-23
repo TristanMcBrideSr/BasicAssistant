@@ -96,7 +96,7 @@ class HoloAssistant:
 
     def run(self):
         while True:
-            prompt = input("You: ")
+            prompt = input("Enter your input:\n")
             if prompt.lower() in ["exit", "quit", "q"]:
                 print("Exiting Holo Assistant. Goodbye!")
                 break

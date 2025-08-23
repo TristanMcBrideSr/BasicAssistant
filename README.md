@@ -42,7 +42,7 @@ PROVIDER=openai
 
 # API keys (set only the ones you need)
 OPENAI_API_KEY=your_openai_api_key
-GOOGLE_API_KEY=your_google_api_key
+GEMINI_API_KEY=your_google_api_key
 GROQ_API_KEY=your_groq_api_key
 ANTHROPIC_API_KEY=your_anthropic_api_key
 XAI_API_KEY=your_xai_api_key
@@ -163,14 +163,14 @@ You can customize the assistant’s behavior by adjusting the following optional
   For animations/videos: collects the first, last, and every *n*-th frame.
 
 * **`verbose`** *(default: False)*
-  Print full raw response structure (not just text).
+  Returns full raw response structure (not just text).
 
 ---
 
 ## 👨‍💻 For Developers
 
 * **Beginners**: Configure `.env`, run `HoloAssistant.py`, and start chatting.
-* **Experienced Devs**: Override models, inject custom skills/actions, or extend `chat()` with tools/APIs.
+* **Experienced Devs**: Override models, inject custom skills/actions, or extend `HoloCompletion()` with tools/APIs.
 
 ---
 
